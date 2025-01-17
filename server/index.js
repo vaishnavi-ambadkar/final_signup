@@ -7,7 +7,7 @@ const app=express()
 app.use(express.json())
 app.use(cors(
   {
-    origin: [""],
+    origin: ["https://final-signup-frontend-six.vercel.app"],
     methods:["POST","GET"],
     credentials:true
   }
