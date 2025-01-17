@@ -155,7 +155,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .post('https://final-signup-a.vercel.app/login', { email, password })
+            .post('https://final-signup-backendd.vercel.app/login', { email, password })
             .then((result) => {
                 if (result.data.message === "Success") {
                     alert("Login successful!"); // Success pop-up
