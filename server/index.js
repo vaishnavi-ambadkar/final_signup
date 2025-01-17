@@ -5,7 +5,14 @@ const EmployeeModel=require('./models/Employee')
 
 const app=express()
 app.use(express.json())
-app.use(cors())
+// app.use(cors(
+//   {
+//     origin: [""],
+//     methods:["POST","GET"],
+//     credentials:true
+//   }
+  
+));
 
 mongoose
   .connect("mongodb+srv://ambadkarvaishnavi667:Sunitaambadkar@signup.q9zwd.mongodb.net/logindb?retryWrites=true&w=majority&appName=signup", {
@@ -13,6 +20,8 @@ mongoose
     useUnifiedTopology: true,
   })
 //mongoose.connect("mongodb+srv://<Bhakti12>:<12345678a>@cluster.hozl3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster");
+
+
 
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
