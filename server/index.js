@@ -5,12 +5,12 @@ const EmployeeModel=require('./models/Employee')
 
 const app=express()
 app.use(express.json())
-// app.use(cors(
-//   {
-//     origin: [""],
-//     methods:["POST","GET"],
-//     credentials:true
-//   }
+app.use(cors(
+  {
+    origin: [""],
+    methods:["POST","GET"],
+    credentials:true
+  }
   
 ));
 
